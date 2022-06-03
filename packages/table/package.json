@@ -1,0 +1,26 @@
+{
+  "name": "@finance-club-sdk/table",
+  "version": "0.0.0",
+  "description": "A table component powered by react table",
+  "keywords": [
+    "table",
+    "react"
+  ],
+  "author": "NishchithRao <nishchitrao5@gmail.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "dist/table.js",
+  "directories": {
+    "dist": "dist",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org/"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  }
+}
