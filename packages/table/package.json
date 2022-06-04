@@ -9,18 +9,24 @@
   "author": "NishchithRao <nishchitrao5@gmail.com>",
   "homepage": "",
   "license": "ISC",
-  "main": "dist/table.js",
+  "main": "lib/table.js",
   "directories": {
-    "dist": "dist",
+    "lib": "lib",
     "test": "__tests__"
   },
   "files": [
-    "dist"
+    "lib"
   ],
   "publishConfig": {
     "registry": "http://registry.npmjs.org/"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "react-table": "^7.8.0"
+  },
+  "devDependencies": {
+    "@types/react-table": "^7.7.12"
   }
 }
