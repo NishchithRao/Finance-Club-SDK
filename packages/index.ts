@@ -1,1 +1,1 @@
-export const sampleFn = () => console.log("Sample Fn");
+export { Table } from "./table/src";
