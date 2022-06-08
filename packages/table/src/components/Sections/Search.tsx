@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useAsyncDebounce, UseGlobalFiltersInstanceProps } from "react-table";
-// @ts-ignore
-import "regenerator-runtime/runtime";
+import "../../styles/table.scss";
 
 export type SearchType = {
   globalFilter: string;

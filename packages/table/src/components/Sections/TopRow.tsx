@@ -1,5 +1,5 @@
-import React from 'react';
-import Search, { SearchType } from './Search';
+import React from "react";
+import Search, { SearchType } from "./Search";
 
 type TopRowType = {
   searchProps: SearchType;
@@ -7,8 +7,8 @@ type TopRowType = {
 
 const TopRow: React.FC<TopRowType> = ({ searchProps }) => {
   return (
-    <div className='d-flex flex-row'>
-      <button>Filter</button>
+    <div className="d-flex flex-row">
+      {/* <button>Filter</button> */}
       <Search {...searchProps} />
     </div>
   );

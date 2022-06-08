@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, useMemo } from "react";
+import React, { PropsWithChildren, useCallback, useMemo } from "react";
 import {
   useTable,
   Column,
@@ -10,23 +10,23 @@ import {
   useResizeColumns,
   useBlockLayout,
 } from "react-table";
+import { separateBySpace } from "../utils";
 import TopRow from "./components/Sections/TopRow";
+import "./styles/table.scss";
 
 export type TableType<T> = {
   data: T[];
 };
 
 const Table = <T,>({ data }: PropsWithChildren<TableType<T>>): JSX.Element => {
-  const capitalize = (str: string) => {
-    return str[0].toUpperCase() + str.slice(1);
-  };
-
   const columns: Column[] = useMemo(
     () =>
       Object.keys(data[0]).map((key): Column => {
+        if (typeof data[key as any] === "object") {
+        }
         return {
           accessor: key,
-          Header: capitalize(key),
+          Header: separateBySpace(key),
           id: key,
           sortDescFirst: true,
           filter: "text",
@@ -34,16 +34,9 @@ const Table = <T,>({ data }: PropsWithChildren<TableType<T>>): JSX.Element => {
       }),
     [data]
   );
-  const defaultColumn = useMemo(
-    () => ({
-      minWidth: 10,
-      maxWidth: 500,
-    }),
-    []
-  );
 
   const table = useTable(
-    { columns, data, defaultColumn },
+    { columns, data },
     useFilters,
     useGlobalFilter,
     useGroupBy,
@@ -82,15 +75,30 @@ const Table = <T,>({ data }: PropsWithChildren<TableType<T>>): JSX.Element => {
                 {headerGroup.headers.map((columnHeader) => {
                   const { key, ...rest } = columnHeader.getHeaderProps();
                   return (
-                    <th className={"th"} key={key}>
-                      {columnHeader.render("Header")}
-                      <span {...columnHeader.getGroupByToggleProps()}>
-                        {columnHeader.isSortedDesc ? (
-                          <span>&#8964;</span>
-                        ) : (
-                          <span>&#8963;</span>
-                        )}
-                      </span>
+                    <th
+                      className={"th"}
+                      key={key}
+                      {...rest}
+                      style={{
+                        width: `calc(100% / ${Object.keys(data[0])} `,
+                      }}
+                    >
+                      <div className="header">
+                        <span {...columnHeader.getGroupByToggleProps()}>
+                          {columnHeader.render("Header")}
+                        </span>
+                        <span {...columnHeader.getSortByToggleProps()}>
+                          {columnHeader.isSorted ? (
+                            columnHeader.isSortedDesc ? (
+                              <span className="icon">&#8964;</span>
+                            ) : (
+                              <span className="icon">&#8963;</span>
+                            )
+                          ) : (
+                            <span className="icon">&#8250;</span>
+                          )}
+                        </span>
+                      </div>
                       <span
                         className={"resize"}
                         {...columnHeader.getResizerProps()}
@@ -115,10 +123,23 @@ const Table = <T,>({ data }: PropsWithChildren<TableType<T>>): JSX.Element => {
                 {row.cells.map((cell) => {
                   const { key, ...rest } = cell.getCellProps();
                   return (
-                    <td className={"td"} key={key} {...rest}>
+                    <td
+                      className={"td"}
+                      key={key}
+                      {...rest}
+                      style={{
+                        width: `calc(100% / ${Object.keys(data[0])} `,
+                      }}
+                    >
                       {cell.render("Cell")}
-                      {cell.isGrouped && ` ( ${row.subRows.length} rows) `}
-                      {row.isExpanded ? "true" : ""}
+                      {cell.isGrouped && !row.isExpanded && (
+                        <span className="icon">&#8250;</span>
+                      )}
+                      {row.isExpanded ? (
+                        <span className="icon">&#8964;</span>
+                      ) : (
+                        ""
+                      )}
                     </td>
                   );
                 })}
