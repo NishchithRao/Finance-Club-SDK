@@ -2,7 +2,16 @@
   "name": "finance-club-sdk",
   "version": "1.0.0",
   "description": "A component library for the finance club website",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "packages"
+  ],
+  "repository": {
+    "url": "https://github.com/NishchithRao/Finance-Club-SDK.git",
+    "type": "git"
+  },
   "scripts": {
     "lerna": "lerna init",
     "lerna:create": "lerna create",

@@ -7,18 +7,23 @@
     "react"
   ],
   "author": "NishchithRao <nishchitrao5@gmail.com>",
+  "repository": {
+    "url": "https://github.com/NishchithRao/Finance-Club-SDK.git",
+    "type": "git"
+  },
   "homepage": "",
   "license": "ISC",
-  "main": "lib/table.js",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "directories": {
-    "lib": "lib",
+    "lib": "dist",
     "test": "__tests__"
   },
   "files": [
     "lib"
   ],
   "publishConfig": {
-    "registry": "http://registry.npmjs.org/"
+    "registry": "http://npm.pkg.github.com/"
   },
   "scripts": {
     "build": "rollup -c"
