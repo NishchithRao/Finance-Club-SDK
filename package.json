@@ -14,6 +14,7 @@
   },
   "scripts": {
     "lerna": "lerna init",
+    "postinstall": "node ./scripts/install",
     "lerna:create": "lerna create",
     "prepare": "husky install",
     "test": "echo Hello",
@@ -45,6 +46,7 @@
     "@types/react": "^18.0.10",
     "@types/react-dom": "^18.0.5",
     "babel-loader": "^8.2.5",
+    "commitlint": "^17.0.2",
     "husky": "^8.0.0",
     "lerna": "^5.0.0",
     "npm-run-all": "^4.1.5",
@@ -62,5 +64,6 @@
   "peerDependencies": {
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
-  }
+  },
+  "dependencies": {}
 }
