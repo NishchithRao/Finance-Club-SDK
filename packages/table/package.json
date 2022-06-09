@@ -1,6 +1,6 @@
 {
   "name": "@finance-club-sdk/table",
-  "version": "0.0.0",
+  "version": "0.0.1-alpha.0",
   "description": "A table component powered by react table",
   "keywords": [
     "table",
