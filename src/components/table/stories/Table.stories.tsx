@@ -1,5 +1,5 @@
-import { Table } from "../src";
-import { TableType } from "../src/Table";
+import { Table } from "..";
+import { TableType } from "../Table";
 import { colorData, userData } from "./data/Table.data";
 
 export default {
