@@ -22,6 +22,9 @@
   "keywords": [
     "react"
   ],
+  "publishConfig": {
+    "registry": "http://npm.pkg.github.com/"
+  },
   "author": "NishchithRao <nishchitrao5@gmail.com>",
   "license": "ISC",
   "devDependencies": {
@@ -60,7 +63,8 @@
   },
   "peerDependencies": {
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "react-table": "^7.8.0"
   },
   "dependencies": {}
 }
