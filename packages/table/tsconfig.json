@@ -1,8 +1,0 @@
-{
-  "extends": "../../tsconfig",
-  "exclude": ["stories"],
-  "compilerOptions": {
-    "declarationDir": "lib",
-    "declaration": true
-  }
-}
