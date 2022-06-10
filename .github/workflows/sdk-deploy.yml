@@ -1,7 +1,7 @@
 name: Publish SDK
 on:
   push:
-    paths: ["src"]
+    branch: feature/table-component
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
