@@ -5,7 +5,7 @@
 ## Usage
 
 ```
-const table = require('@finance-club-sdk/table');
+import {table} from 'finance-club-sdk';
 
 // TODO: DEMONSTRATE API
 ```
