@@ -1,1 +1,1 @@
-{"v":3,"stories":{}}
+{"v":3,"stories":{"components-table--basic":{"id":"components-table--basic","title":"components/table","name":"Basic","importPath":"./src/components/table/stories/Table.stories.tsx"},"components-table--colors":{"id":"components-table--colors","title":"components/table","name":"Colors","importPath":"./src/components/table/stories/Table.stories.tsx"}}}
