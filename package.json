@@ -2,6 +2,7 @@
   "name": "finance-club-sdk",
   "version": "0.0.1",
   "description": "A component library for the finance club website",
+  "homepage": "https://github.com/NishchithRao/Finance-Club-SDK",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "typings": "dist/index.d.ts",
