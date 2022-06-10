@@ -3,16 +3,17 @@ import commonjs from "@rollup/plugin-commonjs";
 import typescript from "rollup-plugin-typescript2";
 import scss from "rollup-plugin-scss";
 import { uglify } from "rollup-plugin-uglify";
+import packageJSON from "./package.json";
 
 export default {
   input: "./src/index.ts",
   output: [
     {
-      file: "dist/index.cjs.js",
+      file: packageJSON.main,
       format: "cjs",
     },
     {
-      file: "dist/index.esm.js",
+      file: packageJSON.module,
       format: "esm",
     },
   ],
