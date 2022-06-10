@@ -18,7 +18,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@3.6.2
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: feature/table-component # The branch the action should deploy to. Change as required on Dev
+          BRANCH: docs # The branch the action should deploy to. Change as required on Dev
           FOLDER: storybook-static
           CLEAN: true
           TARGET_FOLDER: storybook-static
