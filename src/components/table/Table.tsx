@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, useCallback, useMemo } from "react";
+import React, { PropsWithChildren, useMemo } from "react";
 import {
   useTable,
   Column,
@@ -10,9 +10,9 @@ import {
   useResizeColumns,
   useBlockLayout,
 } from "react-table";
-import { separateBySpace } from "../utils";
-import TopRow from "./components/Sections/TopRow";
-import "./styles/table.scss";
+import { separateBySpace } from "@utils";
+import TopRow from "./components/TopRow";
+import "./table.scss";
 
 export type TableType<T> = {
   data: T[];
