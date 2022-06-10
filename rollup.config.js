@@ -5,11 +5,17 @@ import scss from "rollup-plugin-scss";
 import { uglify } from "rollup-plugin-uglify";
 
 export default {
-  input: "./src",
-  output: {
-    dir: "dist",
-    format: "cjs",
-  },
+  input: "./src/index.ts",
+  output: [
+    {
+      file: "dist/index.cjs.js",
+      format: "cjs",
+    },
+    {
+      file: "dist/index.esm.js",
+      format: "esm",
+    },
+  ],
   plugins: [
     uglify(),
     resolve(),
@@ -21,6 +27,7 @@ export default {
     }),
     scss({
       output: "dist/index.css",
+      outputStyle: "compressed",
     }),
   ],
   external: ["react", "react-dom", "react-table"],
