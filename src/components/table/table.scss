@@ -1,0 +1,56 @@
+.table {
+  max-width: 100%;
+  overflow-x: auto;
+  table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+
+    .icon {
+      font-size: 32px;
+      vertical-align: -6px;
+      padding-left: 10px;
+    }
+  }
+  thead {
+    background-color: rgba(208, 238, 247, 0.3);
+    tr {
+      width: 100% !important;
+      display: table-row !important;
+      text-align: left;
+    }
+
+    th {
+      text-transform: capitalize;
+      font-weight: normal;
+      font-weight: 500;
+      font-size: 14px;
+      width: 100% !important;
+      padding-block: 10px;
+      padding-inline: 20px;
+    }
+  }
+  tbody {
+    tr {
+      &:not(:last-child) {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      }
+    }
+    td {
+      text-transform: capitalize;
+      padding-block: 15px;
+      padding-inline: 20px;
+    }
+  }
+}
+
+.table-search {
+  max-width: 20em;
+  width: 100%;
+  padding-block: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding-left: 10px;
+}
