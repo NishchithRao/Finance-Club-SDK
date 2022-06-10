@@ -10,7 +10,7 @@ import {
   useResizeColumns,
   useBlockLayout,
 } from "react-table";
-import { separateBySpace } from "@utils";
+import { separateBySpace } from "../../utils";
 import TopRow from "./components/TopRow";
 import "./table.scss";
 
