@@ -24,7 +24,7 @@
     "react"
   ],
   "publishConfig": {
-    "@NishchithRao:registry": "http://npm.pkg.github.com/"
+    "registry": "http://npm.pkg.github.com/"
   },
   "author": "NishchithRao <nishchitrao5@gmail.com>",
   "license": "ISC",
