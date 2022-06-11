@@ -16,6 +16,7 @@ jobs:
           npm run build
       - name: Publish
         uses: actions/setup-node@v3
+        scope: "@NishchithRao"
         with:
           node-version: "16.x"
           registry-url: "https://npm.pkg.github.com"
